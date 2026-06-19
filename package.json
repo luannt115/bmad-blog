@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "postinstall": "prisma generate",
+    "build": "prisma generate && next build",
     "start": "next start",
     "lint": "eslint",
     "db:generate": "prisma generate",
@@ -12,6 +13,7 @@
     "db:seed": "prisma db seed",
     "db:setup": "prisma migrate deploy && prisma db seed",
     "db:reset-admin": "tsx scripts/reset-admin.ts",
+    "db:seed-pmp": "tsx scripts/seed-pmp-post.ts",
     "db:studio": "prisma studio"
   },
   "dependencies": {

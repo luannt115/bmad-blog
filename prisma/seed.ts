@@ -1,4 +1,5 @@
 import { db } from "../src/lib/db";
+import { seedPmpPost } from "../src/lib/seed-pmp-post";
 import * as argon2 from "argon2";
 
 async function main() {
@@ -54,6 +55,8 @@ async function main() {
   } else {
     console.log("Author user already exists, skipping.");
   }
+
+  await seedPmpPost(db);
 }
 
 main()

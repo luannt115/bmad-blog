@@ -23,6 +23,7 @@
 # misc
 .DS_Store
 *.pem
+PMP_Full_Questions.html
 
 # debug
 npm-debug.log*
